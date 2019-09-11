@@ -1,0 +1,61 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="bgView">
+        <image class="bgViewImage" src="{{anonymousState__temp}}"></image>
+        <view class="topView">
+            <image src="{{anonymousState__temp2}}" mode="scaleToFill"></image><text class="topViewName">MrHello</text><text class="topViewLabelDay" decode="{{true}}" space="{{true}}">出生的第&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;天</text><text class="topViewNumDay">{{passDay}}</text><text class="topViewLabel" decode="{{true}}" space="{{true}}">生命已经过了&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%</text><text class="topViewNum">{{passRate}}</text>
+        </view>
+        <view class="topStartView"><text class="topViewTime">{{startDateString}}</text>
+        </view>
+        <view wx:key="id" wx:for="{{size}}" wx:for-item="item" wx:for-index="outIndex">
+            <view wx:key="id" wx:for="{{item.column}}" wx:for-item="columnitem" wx:for-index="inIndex">
+                <label style="{{'position:fixed;top:' + columnitem.name + 'px;left:' + item.row + 'px;height:' + squareHeight + 'px;width:' + squareWidth + 'px;background:#C9C5BA;z-index:' + columnitem.zindex + ';box-shadow:1px 1px 4px 0px rgba(0,0,0,0.5);'}}"></label>
+            </view>
+        </view>
+        <view class="maskView" style="{{'top:' + topMargin + 'px;left:' + leftMargin + 'px;width:' + maskViewWidth + 'px;height:' + maskViewHeight + 'px;'}}"></view>
+        <block wx:if="{{renderArray.point[0].show}}">
+            <view class="startImage0" style="{{'top:' + renderArray.point[0].top + 'px;left:' + renderArray.point[0].left + 'px;position: fixed;z-index: 6;'}}">
+                <image src="{{anonymousState__temp3}}"></image><text>{{renderArray.point[0].title}}</text>
+            </view>
+        </block>
+        <block wx:if="{{renderArray.point[1].show}}">
+            <view class="startImage1" style="{{'top:' + renderArray.point[1].top + 'px;left:' + renderArray.point[1].left + 'px;position: fixed;z-index: 6;'}}">
+                <image src="{{anonymousState__temp4}}"></image><text>{{renderArray.point[1].title}}</text>
+            </view>
+        </block>
+        <block wx:if="{{renderArray.point[2].show}}">
+            <view class="startImage2" style="{{'top:' + renderArray.point[2].top + 'px;left:' + renderArray.point[2].left + 'px;position: fixed;z-index: 6;'}}">
+                <image src="{{anonymousState__temp5}}"></image><text>{{renderArray.point[2].title}}</text>
+            </view>
+        </block>
+        <block wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index">
+            <view class="lineImage">
+                <block wx:if="{{index < 1}}"><text style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}">{{renderArray.line[0].title}}</text>
+                </block>
+                <image src="{{item.$loopState__temp7}}" mode="scaleToFill" style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}"></image>
+            </view>
+        </block>
+        <block wx:for="{{loopArray2}}" wx:for-item="item" wx:for-index="index">
+            <view class="lineImage">
+                <block wx:if="{{index < 1}}"><text style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}">{{renderArray.line[1].title}}</text>
+                </block>
+                <image src="{{item.$loopState__temp9}}" mode="scaleToFill" style="{{'position: fixed;top:' + (item.$original.top + 2) + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}"></image>
+            </view>
+        </block>
+        <block wx:for="{{loopArray3}}" wx:for-item="item" wx:for-index="index">
+            <view class="lineImage">
+                <block wx:if="{{index < 1}}"><text style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}">{{renderArray.line[2].title}}</text>
+                </block>
+                <image src="{{item.$loopState__temp11}}" mode="scaleToFill" style="{{'position: fixed;top:' + (item.$original.top + 4) + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}"></image>
+            </view>
+        </block>
+        <image src="{{anonymousState__temp12}}" style="{{'position:fixed;top:' + (topMargin + maskViewHeight + squareHeight) + 'px;height:20px;width:20px;left:20px;'}}"></image>
+        <label style="{{'position:fixed;top:' + (topMargin + maskViewHeight + squareHeight) + 'px;height:20px;width:100px;left:40px;font-size:14px;font-family:PingFangSC-Regular;font-weight:400;'}}">未知的未来</label>
+        <image src="{{anonymousState__temp13}}" style="{{'position:fixed;top:' + (topMargin + maskViewHeight + squareHeight) + 'px;height:25px;width:25px;left:130px;'}}"></image>
+        <label style="{{'position:fixed;top:' + (topMargin + maskViewHeight + squareHeight) + 'px;height:20px;width:100px;left:150px;font-size:14px;font-family:PingFangSC-Regular;font-weight:400;'}}">消逝的过往</label>
+        <label style="{{'position:fixed;top:' + (topMargin + maskViewHeight + squareHeight) + 'px;right:' + leftMargin + 'px;padding-right:5px;border-right: solid 5px #FF6348;font-size:14pxfont-family:SourceHanSansCN-Normal;font-weight:400;'}}">{{endDateString}}</label>
+        <button class="hideBtn" bindtap="hideAction">{{bottomViewFlag}}</button>
+        <view class="bottomView" style="{{'left:' + bottomViewLeft + 'px;'}}">
+            <image src="{{anonymousState__temp14}}" bindtap="addAction"></image>
+        </view>
+    </view>
+</block>

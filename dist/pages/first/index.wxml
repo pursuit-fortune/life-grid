@@ -1,0 +1,21 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="page-entry">
+        <image class="header" src="{{anonymousState__temp}}"></image>
+        <view class="content">
+            <view class="date">
+                <picker mode="date" value="{{date}}" end="{{end}}" bindchange="bindDateChange">
+                    <view class="date-picker">{{date ? date : '输入出生年月日'}}</view>
+                </picker>
+                <view class="date-label">我来到这个世上</view>
+            </view>
+            <view class="age">
+                <view>我觉得我能活到</view>
+                <view class="age-no">
+                    <input class="age-input" type="number" value="{{age}}" placeholder="多少" bindinput="ageChange" />
+                    <view class="bottom-line"></view><text>岁</text>
+                </view>
+            </view>
+        </view>
+        <image src="{{anonymousState__temp2}}" class="footer" bindtap="nextAction"></image>
+    </view>
+</block>

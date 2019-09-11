@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="containerView">
+        <input placeholder="请输入" />
+    </view>
+</block>

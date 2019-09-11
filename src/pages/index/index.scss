@@ -1,0 +1,140 @@
+.topView{
+  position: fixed;
+  top: 20px;
+  height:60px;
+  left: 20px;
+  right: 20px;
+  z-index: 8;
+}
+.topView text{
+  position: absolute;
+  bottom: 0px;
+  font-size:28px;
+  font-family:SourceHanSansCN-Normal;
+  font-weight:400;
+  line-height:42px;
+}
+.topView image{
+  width:100px;
+  height:100px;
+  border-radius: 50px;
+}
+.topStartView{
+  position: fixed;
+  top: 140px;
+  height:60px;
+  left: 20px;
+  right: 20px;
+  z-index: 8;
+}
+.topViewTime{
+  border-left: solid 8px #10AC84;
+  padding-left: 10px;
+}
+.topViewName{
+  /* right: 134px; */
+  left: 110px;
+  height:40px;
+  font-size:40px !important;
+  color:rgba(0,0,0,1);
+  text-decoration:underline;
+}
+.topViewLabelDay{
+  top:10px;
+  right: 4px;
+}
+.topViewNumDay{
+  top:6px;
+  right: 34px;
+  font-size:48px !important;
+  font-weight:400;
+  line-height: 60px !important;
+  color:white;
+  background-color: rgba(159,53,58,1);
+  border-radius: 10px;
+}
+.topViewLabel{
+  top:60px;
+  right: 4px;
+}
+.topViewNum{
+  top:60px;
+  right: 30px;
+  font-size:48px !important;
+  font-weight:400;
+  color:rgba(159,53,58,1);
+}
+
+
+.bgView{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #C4BDAC;
+}
+.bgViewImage{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.startImage0 image{
+  height: 50px;
+  width: 50px;
+}
+.startImage0 text{
+  position: absolute;
+  /* top:30px; */
+  width: 200px;
+}
+.startImage1 image{
+  height: 40px;
+  width: 40px;
+}
+.startImage1 text{
+  position: absolute;
+  width: 200px;
+}
+.startImage2 image{
+  height: 30px;
+  width: 30px;
+}
+.startImage2 text{
+  position: absolute;
+  /* top:-30px; */
+  width: 200px;
+}
+
+
+
+.maskView{
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(#10AC84,#F6E58D,#FF6348);
+  opacity: 0.75;
+  z-index:1;
+}
+
+.hideBtn{
+  position: fixed;
+  bottom: 300px;
+  right: 20px;
+  z-index: 100;
+}
+.bottomView{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background:linear-gradient(180deg,rgba(238,238,238,0.36) 0%,rgba(255,255,255,1) 100%);
+}
+.bottomView image{
+  width: 700px;
+  height: 300px;
+  bottom: 0px;
+}

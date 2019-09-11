@@ -1,0 +1,148 @@
+
+.topView {
+  position: fixed;
+  top: 20rpx;
+  height: 60rpx;
+  left: 20rpx;
+  right: 20rpx;
+  z-index: 8; }
+
+.topView text {
+  position: absolute;
+  bottom: 0;
+  font-size: 28rpx;
+  font-family: SourceHanSansCN-Normal;
+  font-weight: 400;
+  line-height: 42rpx; }
+
+.topView image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx; }
+
+.topStartView {
+  position: fixed;
+  top: 140rpx;
+  height: 60rpx;
+  left: 20rpx;
+  right: 20rpx;
+  z-index: 8; }
+
+.topViewTime {
+  border-left: solid 8rpx #10AC84;
+  padding-left: 10rpx; }
+
+.topViewName {
+  /* right: 134px; */
+  left: 110rpx;
+  height: 40rpx;
+  font-size: 40rpx !important;
+  color: black;
+  text-decoration: underline; }
+
+.topViewLabelDay {
+  top: 10rpx;
+  right: 4rpx; }
+
+.topViewNumDay {
+  top: 6rpx;
+  right: 34rpx;
+  font-size: 48rpx !important;
+  font-weight: 400;
+  line-height: 60rpx !important;
+  color: white;
+  background-color: #9f353a;
+  border-radius: 10rpx; }
+
+.topViewLabel {
+  top: 60rpx;
+  right: 4rpx; }
+
+.topViewNum {
+  top: 60rpx;
+  right: 30rpx;
+  font-size: 48rpx !important;
+  font-weight: 400;
+  color: #9f353a; }
+
+.bgView {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #C4BDAC; }
+
+.bgViewImage {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5; }
+
+.startImage0 image {
+  height: 50rpx;
+  width: 50rpx; }
+
+.startImage0 text {
+  position: absolute;
+  /* top:30px; */
+  width: 200rpx; }
+
+.startImage1 image {
+  height: 40rpx;
+  width: 40rpx; }
+
+.startImage1 text {
+  position: absolute;
+  width: 200rpx; }
+
+.startImage2 image {
+  height: 30rpx;
+  width: 30rpx; }
+
+.startImage2 text {
+  position: absolute;
+  /* top:-30px; */
+  width: 200rpx; }
+
+.maskView {
+  position: fixed;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#10AC84), color-stop(#F6E58D), to(#FF6348));
+  background: -webkit-linear-gradient(#10AC84, #F6E58D, #FF6348);
+  background: -o-linear-gradient(#10AC84, #F6E58D, #FF6348);
+  background: linear-gradient(#10AC84, #F6E58D, #FF6348);
+  opacity: 0.75;
+  z-index: 1; }
+
+.hideBtn {
+  position: fixed;
+  bottom: 300rpx;
+  right: 20rpx;
+  z-index: 100; }
+
+.bottomView {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 300rpx;
+  z-index: 5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(238, 238, 238, 0.36)), to(white));
+  background: -webkit-linear-gradient(top, rgba(238, 238, 238, 0.36) 0%, white 100%);
+  background: -o-linear-gradient(top, rgba(238, 238, 238, 0.36) 0%, white 100%);
+  background: linear-gradient(180deg, rgba(238, 238, 238, 0.36) 0%, white 100%); }
+
+.bottomView image {
+  width: 700rpx;
+  height: 300rpx;
+  bottom: 0; }
