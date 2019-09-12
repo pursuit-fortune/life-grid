@@ -1,2 +1,10 @@
 
 /* pages/add/index.wxss */
+.containerView {
+  position: relative;
+  min-height: 100vh;
+  background-color: #C4BDAC; }
+  .containerView .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%; }

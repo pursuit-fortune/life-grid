@@ -45,7 +45,11 @@ Date.prototype.Format = function(fmt) {
       { start: '2009/08', end: '2013/06', title: '上大学', level: 0 }
     ],
     bottomViewLeft: 0,
-    bottomViewFlag: '收起'
+    bottomViewFlag: '收起',
+    renderArray: {
+      point: [],
+      line: []
+    }
   },
   //事件处理函数
   bindViewTap: function() {
@@ -151,10 +155,6 @@ Date.prototype.Format = function(fmt) {
         var endFullRow = parseInt(durationMonth / 30)
         var endTop = this.data.topMargin + everywidth * endFullRow
         var endLeft = this.data.leftMargin + everywidth * (durationMonth % 30)
-        // console.log(endTop);
-        // console.log(endLeft);
-        // console.log(startTop);
-        // console.log(startLeft);
 
         if (parseInt(startTop) == parseInt(endTop)) {
           //在同一行
@@ -332,7 +332,7 @@ class _C extends Taro.Component {
             'px;'
           }
         ></View>
-        {renderArray.point[0].show && (
+        {renderArray.point[0] && renderArray.point[0].show && (
           <View
             className="startImage0"
             style={
@@ -347,7 +347,7 @@ class _C extends Taro.Component {
             <Text>{renderArray.point[0].title}</Text>
           </View>
         )}
-        {renderArray.point[1].show && (
+        {renderArray.point[1] && renderArray.point[1].show && (
           <View
             className="startImage1"
             style={
@@ -362,7 +362,7 @@ class _C extends Taro.Component {
             <Text>{renderArray.point[1].title}</Text>
           </View>
         )}
-        {renderArray.point[2].show && (
+        {renderArray.point[2] && renderArray.point[2].show && (
           <View
             className="startImage2"
             style={
@@ -377,7 +377,7 @@ class _C extends Taro.Component {
             <Text>{renderArray.point[2].title}</Text>
           </View>
         )}
-        {renderArray.line[0].images.map((item, index) => {
+        {renderArray.line[0] && renderArray.line[0].images.map((item, index) => {
           return (
             <Block>
               <View className="lineImage">
@@ -413,7 +413,7 @@ class _C extends Taro.Component {
             </Block>
           )
         })}
-        {renderArray.line[1].images.map((item, index) => {
+        {renderArray.line[1] && renderArray.line[1].images.map((item, index) => {
           return (
             <Block>
               <View className="lineImage">
@@ -449,7 +449,7 @@ class _C extends Taro.Component {
             </Block>
           )
         })}
-        {renderArray.line[2].images.map((item, index) => {
+        {renderArray.line[2] && renderArray.line[2].images.map((item, index) => {
           return (
             <Block>
               <View className="lineImage">

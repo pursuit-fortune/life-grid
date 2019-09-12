@@ -64,7 +64,6 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
     value: function componentDidShow() {
       var age = _index2.default.getStorageSync('age');
       var date = _index2.default.getStorageSync('date');
-      console.log(age, date);
       this.setData({
         age: age,
         date: date
@@ -81,7 +80,6 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
   }, {
     key: "ageChange",
     value: function ageChange(e) {
-      console.log(e);
       var value = e.detail.value;
 
       if (value > 999) {
@@ -93,7 +91,6 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
       this.setData({
         age: Math.min(value, 999)
       });
-      _index2.default.setStorageSync('age', Math.min(value, 999));
     }
   }, {
     key: "nextAction",
@@ -105,6 +102,8 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
         });
         return;
       }
+      _index2.default.setStorageSync('age', this.data.age);
+      _index2.default.setStorageSync('date', this.data.date);
       _index2.default.navigateTo({
         url: '../index/index'
       });

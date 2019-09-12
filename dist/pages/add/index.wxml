@@ -1,5 +1,6 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="containerView">
+        <image class="bg" src="{{anonymousState__temp}}"></image>
         <input placeholder="请输入" />
     </view>
 </block>

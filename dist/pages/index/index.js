@@ -60,7 +60,11 @@ var _C = (_dec = (0, _index4.default)({
     //数据模型 外界传入  end字段可以不填，不填是点，填了是线
     modelArray: [{ start: '1997/08', end: '2003/06', title: '上小学', level: 0 }, { start: '2006/09', end: '2008/06', title: '上中学', level: 0 }, { start: '2009/08', end: '2013/06', title: '上大学', level: 0 }],
     bottomViewLeft: 0,
-    bottomViewFlag: '收起'
+    bottomViewFlag: '收起',
+    renderArray: {
+      point: [],
+      line: []
+    }
   },
   //事件处理函数
   bindViewTap: function bindViewTap() {
@@ -149,10 +153,6 @@ var _C = (_dec = (0, _index4.default)({
         var endFullRow = parseInt(durationMonth / 30);
         var endTop = this.data.topMargin + everywidth * endFullRow;
         var endLeft = this.data.leftMargin + everywidth * (durationMonth % 30);
-        // console.log(endTop);
-        // console.log(endLeft);
-        // console.log(startTop);
-        // console.log(startLeft);
 
         if (parseInt(startTop) == parseInt(endTop)) {
           //在同一行
@@ -255,7 +255,7 @@ var _C = (_dec = (0, _index4.default)({
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _C.__proto__ || Object.getPrototypeOf(_C)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp12", "anonymousState__temp13", "anonymousState__temp14", "renderArray", "loopArray1", "loopArray2", "loopArray3", "size", "squareHeight", "squareWidth", "topMargin", "leftMargin", "maskViewWidth", "maskViewHeight", "bottomViewLeft", "passDay", "passRate", "startDateString", "endDateString", "bottomViewFlag"], _this.config = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _C.__proto__ || Object.getPrototypeOf(_C)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "anonymousState__temp5", "anonymousState__temp12", "anonymousState__temp13", "anonymousState__temp14", "renderArray", "loopArray61", "loopArray62", "loopArray63", "size", "squareHeight", "squareWidth", "topMargin", "leftMargin", "maskViewWidth", "maskViewHeight", "bottomViewLeft", "passDay", "passRate", "startDateString", "endDateString", "bottomViewFlag"], _this.config = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(_C, [{
@@ -292,42 +292,42 @@ var _C = (_dec = (0, _index4.default)({
 
       var anonymousState__temp = "/pages/images/bg_image.png";
       var anonymousState__temp2 = "/pages/images/start_point.png";
-      var anonymousState__temp3 = renderArray.point[0].show ? "/pages/images/start_point.png" : null;
-      var anonymousState__temp4 = renderArray.point[1].show ? "/pages/images/start_point2.png" : null;
-      var anonymousState__temp5 = renderArray.point[2].show ? "/pages/images/start_point3.png" : null;
+      var anonymousState__temp3 = renderArray.point[0] && renderArray.point[0].show ? "/pages/images/start_point.png" : null;
+      var anonymousState__temp4 = renderArray.point[1] && renderArray.point[1].show ? "/pages/images/start_point2.png" : null;
+      var anonymousState__temp5 = renderArray.point[2] && renderArray.point[2].show ? "/pages/images/start_point3.png" : null;
       var anonymousState__temp12 = "/pages/images/gray_square.png";
       var anonymousState__temp13 = "/pages/images/color_square.png";
       var anonymousState__temp14 = "/pages/images/bg_bottom.png";
-      var loopArray1 = renderArray.line[0].images.map(function (item, index) {
+      var loopArray61 = renderArray.line[0] ? renderArray.line[0].images.map(function (item, index) {
         item = {
           $original: (0, _index.internal_get_original)(item)
         };
-        var $loopState__temp7 = "/pages/images/line.png";
+        var $loopState__temp7 = renderArray.line[0] ? "/pages/images/line.png" : null;
         return {
           $loopState__temp7: $loopState__temp7,
           $original: item.$original
         };
-      });
-      var loopArray2 = renderArray.line[1].images.map(function (item, index) {
+      }) : [];
+      var loopArray62 = renderArray.line[1] ? renderArray.line[1].images.map(function (item, index) {
         item = {
           $original: (0, _index.internal_get_original)(item)
         };
-        var $loopState__temp9 = "/pages/images/line1.png";
+        var $loopState__temp9 = renderArray.line[1] ? "/pages/images/line1.png" : null;
         return {
           $loopState__temp9: $loopState__temp9,
           $original: item.$original
         };
-      });
-      var loopArray3 = renderArray.line[2].images.map(function (item, index) {
+      }) : [];
+      var loopArray63 = renderArray.line[2] ? renderArray.line[2].images.map(function (item, index) {
         item = {
           $original: (0, _index.internal_get_original)(item)
         };
-        var $loopState__temp11 = "/pages/images/line2.png";
+        var $loopState__temp11 = renderArray.line[2] ? "/pages/images/line2.png" : null;
         return {
           $loopState__temp11: $loopState__temp11,
           $original: item.$original
         };
-      });
+      }) : [];
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
@@ -338,9 +338,9 @@ var _C = (_dec = (0, _index4.default)({
         anonymousState__temp13: anonymousState__temp13,
         anonymousState__temp14: anonymousState__temp14,
         renderArray: renderArray,
-        loopArray1: loopArray1,
-        loopArray2: loopArray2,
-        loopArray3: loopArray3,
+        loopArray61: loopArray61,
+        loopArray62: loopArray62,
+        loopArray63: loopArray63,
         size: size,
         squareHeight: squareHeight,
         squareWidth: squareWidth,

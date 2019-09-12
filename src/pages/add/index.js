@@ -1,4 +1,4 @@
-import { Block, View, Input } from '@tarojs/components'
+import { Block, View, Input, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import withWeapp from '@tarojs/with-weapp'
 import './index.scss'
@@ -52,9 +52,14 @@ import './index.scss'
 class _C extends Taro.Component {
   config = {}
 
+  state = {
+
+  }
+
   render() {
     return (
       <View className="containerView">
+        <Image className="bg" src={require('../images/bg_image.png')} />
         <Input placeholder="请输入"></Input>
       </View>
     )

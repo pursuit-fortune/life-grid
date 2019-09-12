@@ -12,41 +12,47 @@
             </view>
         </view>
         <view class="maskView" style="{{'top:' + topMargin + 'px;left:' + leftMargin + 'px;width:' + maskViewWidth + 'px;height:' + maskViewHeight + 'px;'}}"></view>
-        <block wx:if="{{renderArray.point[0].show}}">
+        <block wx:if="{{renderArray.point[0] && renderArray.point[0].show}}">
             <view class="startImage0" style="{{'top:' + renderArray.point[0].top + 'px;left:' + renderArray.point[0].left + 'px;position: fixed;z-index: 6;'}}">
                 <image src="{{anonymousState__temp3}}"></image><text>{{renderArray.point[0].title}}</text>
             </view>
         </block>
-        <block wx:if="{{renderArray.point[1].show}}">
+        <block wx:if="{{renderArray.point[1] && renderArray.point[1].show}}">
             <view class="startImage1" style="{{'top:' + renderArray.point[1].top + 'px;left:' + renderArray.point[1].left + 'px;position: fixed;z-index: 6;'}}">
                 <image src="{{anonymousState__temp4}}"></image><text>{{renderArray.point[1].title}}</text>
             </view>
         </block>
-        <block wx:if="{{renderArray.point[2].show}}">
+        <block wx:if="{{renderArray.point[2] && renderArray.point[2].show}}">
             <view class="startImage2" style="{{'top:' + renderArray.point[2].top + 'px;left:' + renderArray.point[2].left + 'px;position: fixed;z-index: 6;'}}">
                 <image src="{{anonymousState__temp5}}"></image><text>{{renderArray.point[2].title}}</text>
             </view>
         </block>
-        <block wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index">
-            <view class="lineImage">
-                <block wx:if="{{index < 1}}"><text style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}">{{renderArray.line[0].title}}</text>
-                </block>
-                <image src="{{item.$loopState__temp7}}" mode="scaleToFill" style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}"></image>
-            </view>
+        <block wx:if="{{renderArray.line[0]}}">
+            <block wx:for="{{loopArray61}}" wx:for-item="item" wx:for-index="index">
+                <view class="lineImage">
+                    <block wx:if="{{index < 1}}"><text style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}">{{renderArray.line[0].title}}</text>
+                    </block>
+                    <image src="{{item.$loopState__temp7}}" mode="scaleToFill" style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}"></image>
+                </view>
+            </block>
         </block>
-        <block wx:for="{{loopArray2}}" wx:for-item="item" wx:for-index="index">
-            <view class="lineImage">
-                <block wx:if="{{index < 1}}"><text style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}">{{renderArray.line[1].title}}</text>
-                </block>
-                <image src="{{item.$loopState__temp9}}" mode="scaleToFill" style="{{'position: fixed;top:' + (item.$original.top + 2) + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}"></image>
-            </view>
+        <block wx:if="{{renderArray.line[1]}}">
+            <block wx:for="{{loopArray62}}" wx:for-item="item" wx:for-index="index">
+                <view class="lineImage">
+                    <block wx:if="{{index < 1}}"><text style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}">{{renderArray.line[1].title}}</text>
+                    </block>
+                    <image src="{{item.$loopState__temp9}}" mode="scaleToFill" style="{{'position: fixed;top:' + (item.$original.top + 2) + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}"></image>
+                </view>
+            </block>
         </block>
-        <block wx:for="{{loopArray3}}" wx:for-item="item" wx:for-index="index">
-            <view class="lineImage">
-                <block wx:if="{{index < 1}}"><text style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}">{{renderArray.line[2].title}}</text>
-                </block>
-                <image src="{{item.$loopState__temp11}}" mode="scaleToFill" style="{{'position: fixed;top:' + (item.$original.top + 4) + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}"></image>
-            </view>
+        <block wx:if="{{renderArray.line[2]}}">
+            <block wx:for="{{loopArray63}}" wx:for-item="item" wx:for-index="index">
+                <view class="lineImage">
+                    <block wx:if="{{index < 1}}"><text style="{{'position: fixed;top:' + item.$original.top + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}">{{renderArray.line[2].title}}</text>
+                    </block>
+                    <image src="{{item.$loopState__temp11}}" mode="scaleToFill" style="{{'position: fixed;top:' + (item.$original.top + 4) + 'px;left:' + item.$original.left + 'px; height:5px; z-index: 6;height:5px;width:' + item.$original.width + 'px;'}}"></image>
+                </view>
+            </block>
         </block>
         <image src="{{anonymousState__temp12}}" style="{{'position:fixed;top:' + (topMargin + maskViewHeight + squareHeight) + 'px;height:20px;width:20px;left:20px;'}}"></image>
         <label style="{{'position:fixed;top:' + (topMargin + maskViewHeight + squareHeight) + 'px;height:20px;width:100px;left:40px;font-size:14px;font-family:PingFangSC-Regular;font-weight:400;'}}">未知的未来</label>

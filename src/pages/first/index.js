@@ -20,7 +20,6 @@ class _C extends Taro.Component {
   componentDidShow () {
     const age = Taro.getStorageSync('age')
     const date = Taro.getStorageSync('date')
-    console.log(age, date)
     this.setData({
       age,
       date
@@ -35,7 +34,6 @@ class _C extends Taro.Component {
   }
 
   ageChange(e) {
-    console.log(e)
     const { value } = e.detail
     if (value > 999) {
       Taro.showToast({
@@ -46,7 +44,6 @@ class _C extends Taro.Component {
     this.setData({
       age: Math.min(value, 999)
     })
-    Taro.setStorageSync('age', Math.min(value, 999))
   }
 
   nextAction() {
@@ -57,6 +54,8 @@ class _C extends Taro.Component {
       })
       return
     }
+    Taro.setStorageSync('age', this.data.age)
+    Taro.setStorageSync('date', this.data.date)
     Taro.navigateTo({
       url: '../index/index'
     })
